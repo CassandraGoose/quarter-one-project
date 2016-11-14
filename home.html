@@ -2,12 +2,43 @@
 
 <head>
     <title>textSENSE</title>
-    <script type="text/javascript" src="js/vendor/foundation.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+<script src="js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.accordion.js"></script>
     <link rel="stylesheet" href="custom.css">
     </head>
+
 <body>
-  <header>
-  </header>
+    <div class="parallax-background">
+  <div class="intro-text">
+    textSENSE
+    <p><i class="fi-arrow-down"></i></p>
+  </div>
+</div>
+
+<div class="parallax-content">
+  <p>Bacon ipsum dolor sit amet chicken pork loin hamburger ball tip, swine tenderloin salami meatball boudin tri-tip fatback shank bacon. Pork salami kevin, brisket spare ribs strip steak ham hock porchetta. Pork belly short loin tail porchetta. Pork pig meatball, beef ribs doner jerky tri-tip hamburger filet mignon strip steak ball tip ham tail tongue corned beef.</p>
+
+<ul class="accordion" data-accordion role="tablist">
+  <li class="accordion-navigation">
+    <a href="#panel1d" role="tab" id="panel1d-heading" aria-controls="panel1d">Accordion 1</a>
+    <div id="panel1d" class="content active" role="tabpanel" aria-labelledby="panel1d-heading">
+      Panel 1. Lorem ipsum dolor
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel2d"  role="tab" id="panel2d-heading" aria-controls="panel2d">Accordion 2</a>
+    <div id="panel2d" class="content" role="tabpanel" aria-labelledby="panel2d-heading">
+      Panel 2. Lorem ipsum dolor
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel3d" role="tab" id="panel3d-heading" aria-controls="panel3d">Accordion 3</a>
+    <div id="panel3d" class="content" role="tabpanel" aria-labelledby="panel3d-heading">
+      Panel 3. Lorem ipsum dolor
+    </div>
+  </li>
+</ul>
+</div>
 </body>
 </html>
