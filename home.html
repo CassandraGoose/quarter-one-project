@@ -2,7 +2,11 @@
 
 <head>
     <title>textSENSE</title>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/js/foundation.accordion.js"></script>
+     <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/js/foundation.accordionMenu.js"></script>
     <link rel="stylesheet" href="custom.css">
 </head>
 
@@ -15,35 +19,42 @@
     </div>
 
     <div class="parallax-content">
-        <p>Bacon ipsum dolor sit amet chicken pork loin hamburger ball tip, swine tenderloin salami meatball boudin tri-tip fatback shank bacon. Pork salami kevin, brisket spare ribs strip steak ham hock porchetta. Pork belly short loin tail porchetta. Pork
-            pig meatball, beef ribs doner jerky tri-tip hamburger filet mignon strip steak ball tip ham tail tongue corned beef.</p>
+        <p>textSENSE allows you to paste any English text into the textbox and receive information on the tone that the text expresses. It also supplies suggestions and displays a visual to better understand the tone of your text. </p>
+        <form>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Check the tone of this text:
+                      <textarea placeholder="please input text here"></textarea>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="panel clearfix">
+            <a href="#" class="button float-right button radius">SUBMIT</a>
+        </div>
 
-            <ul class="accordion" data-accordion>
-      <li class="accordion-navigation">
-        <a href="#panel1a">Accordion 1</a>
-        <div id="panel1a" class="content active">
-          Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </li>
-      <li class="accordion-navigation">
-        <a href="#panel2a">Accordion 2</a>
-        <div id="panel2a" class="content">
-          Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </li>
-      <li class="accordion-navigation">
-        <a href="#panel3a">Accordion 3</a>
-        <div id="panel3a" class="content">
-          Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </li>
-    </ul>
+        <ul class="accordion" data-accordion data-multi-expand="true">
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Accordion 1</a>
+                <div class="accordion-content" data-tab-content>
+                  displays the tone of your text
+                </div>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Accordion 2</a>
+                <div class="accordion-content" data-tab-content>
+                  displays suggestions
+                </div>
+        </ul>
     </div>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/foundation.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/plugins/foundation.accordion.js"></script>
-    <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/js/foundation.accordionMenu.js"></script>
+    <script>
+        $(document).foundation()
+    </script>
+<footer>
+  <div class="parallax-footer">
+    <small>&copy; Cassandra Torske 2016</small>
+  </div>
+</footer>
 </body>
 
 </html>
