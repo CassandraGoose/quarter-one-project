@@ -4321,3 +4321,12 @@ table.hover tbody tr:nth-of-type(even):hover {
 	               font-size: 20px;
 	                background-color: #fff;
                 }
+
+      @charset "UTF-8";
+    .accordion-navigation > a:after {
+      content: "↡";
+      padding-left: 5px;
+      float: right;
+      font-size: 20px; }
+    .accordion-navigation.active > a:after {
+      content: "↟"; }
