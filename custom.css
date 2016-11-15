@@ -964,7 +964,7 @@ label {
     font-size: 0.875rem;
     font-weight: normal;
     line-height: 1.8;
-    color: #A1A1A1;
+    color: #3D406B;
 }
 
 label.middle {
@@ -2773,7 +2773,7 @@ input:checked+label>.switch-inactive {
 
 .accordion {
     list-style-type: none;
-    background: #dddddd;
+    background-color: #dddddd;
     margin-left: 0;
 }
 
@@ -2827,7 +2827,7 @@ input:checked+label>.switch-inactive {
 }
 
  :last-child>.accordion-content:last-child {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #dddddd;
 }
 
 .dropdown-pane {
@@ -3075,11 +3075,11 @@ html, body {
 .callout {
     margin: 0 0 1rem 0;
     padding: 1rem;
-    border: 1px solid rgba(10, 10, 10, 0.25);
+    border: 1px solid #DDDDDD;
     border-radius: 3px;
     position: relative;
     color: #0a0a0a;
-    background-color: white;
+    background-color: #DDDDDD;
 }
 
 .callout> :first-child {
@@ -3444,13 +3444,13 @@ table.hover tbody tr:nth-of-type(even):hover {
     white-space: nowrap;
     cursor: default;
     border-radius: 3px;
-    background: #563635;
-    color: #fefefe;
+    background: #dddddd;
+    color: #3D406B;
 }
 
 .label.secondary {
-    background: #5B6057;
-    color: #fefefe;
+    background: #dddddd;
+    color: #3D406B;
 }
 
 .label.alert {
@@ -3469,13 +3469,13 @@ table.hover tbody tr:nth-of-type(even):hover {
 }
 
 .label.body-font {
-    background: #78C091;
-    color: #0a0a0a;
+    background: #dddddd;
+    color: #3D406B;
 }
 
 .label.header {
-    background: #6E9075;
-    color: #fefefe;
+    background: #dddddd;
+    color: #3D406B;
 }
 
 .progress {
