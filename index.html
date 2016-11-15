@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>textSENSE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/js/foundation.accordion.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/js/foundation.accordionMenu.js"></script>
+    <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+    <div class="parallax-background">
+        <div class="intro-text">
+            textSENSE
+            <p><i class="fi-arrow-down"></i></p>
+        </div>
+    </div>
+
+    <div class="parallax-content">
+        <p>textSENSE allows you to paste any English text into the textbox and receive information on the tone that the text expresses. It also supplies suggestions and displays a visual to better understand the tone of your text. </p>
+        <form>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Check the tone of this text:
+                      <textarea placeholder="please input text here" id="thisarea"></textarea>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="panel clearfix row">
+            <a href="#" class="button float-right button radius" id="thisbutton">SUBMIT</a>
+        </div>
+
+        <ul class="accordion" data-accordion data-multi-expand="true">
+            <li class="accordion-item" id="toneresults" data-accordion-item>
+                <a href="#" class="accordion-title">Tone Results</a>
+                  <div class="accordion-content" data-tab-content>
+                    <p id="toneresults"></p>
+                  </div>
+                <li class="accordion-item" data-accordion-item>
+                  <a href="#" class="accordion-title">Suggestions</a>
+                    <div class="accordion-content" data-tab-content>
+                        displays suggestions
+                    </div>
+                  </ul>
+
+            <p>this section will contain the graphic that should help detail the tone of the text!</p>
+    </div>
+
+    <script>
+        $(document).foundation()
+    </script>
+    <footer>
+        <div class="parallax-footer">
+            <small>&copy; Cassandra Torske 2016</small>
+        </div>
+    </footer>
+    <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>
