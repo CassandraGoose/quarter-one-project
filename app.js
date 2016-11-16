@@ -24,6 +24,7 @@ $(document).ready(function() {
   }
   appendTone(returnedObject)
   highestScore(scoreEmotionArray)
+  appendPercent(scoreEmotionArray)
 })
 
 
@@ -100,9 +101,6 @@ var returnedObject = {
   }
 }
 
-function appendGraph(scoreEmotionArray) {
-
-}
 
 function appendTone(returnedObject) {
   $('#toneresults').append(new Option(angerScore(angerObjectScore)))
@@ -244,6 +242,28 @@ function aggreeablenessScore(aggreeablenessObjectScore) {
   var returnThis = aggreeablenessReturn
   return "Your " + returnThis + "."
 }
+
+function appendPercent(scoreEmotionArray) {
+  var angerPercent = angerObjectScore * 100 + "%"
+  var disgustPercent = disgustObjectScore * 100 + "%"
+  var fearPercent = fearObjectScore * 100 + "%"
+  var joyPercent = joyObjectScore * 100 + "%"
+  var sadnessPercent = sadnessObjectScore * 100 + "%"
+  $('#angerID').append(angerPercent)
+  $('#disgustID').append(disgustPercent)
+  $('#fearID').append(fearPercent)
+  $('#joyID').append(joyPercent)
+  $('#sadnessID').append(sadnessPercent)
+  $('#angerBar').css('width', "" + angerPercent + "")
+  $('#disgustBar').css('width', "" + disgustPercent + "")
+  $('#fearBar').css('width', "" + disgustPercent + "")
+  $('#joyBar').css('width', "" + joyPercent + "")
+  $('#sadnessBar').css('width', "" + sadnessPercent + "")
+
+}
+
+
+
 
 
 // console.log(extraversionScore(extraversionObjectScore))

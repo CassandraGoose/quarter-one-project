@@ -14,17 +14,17 @@
 
 <body>
     <div class="parallax-background">
-      <nav role="navigation">
-        <ul id="menu" class="overlay-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-        <a class="toggle-menu" href="#menu"><i class="fi-plus"></i></a>
-      </nav>
+        <nav role="navigation">
+            <ul id="menu" class="overlay-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a class="toggle-menu" href="#menu"><i class="fi-plus"></i></a>
+        </nav>
 
-      <div class="intro-text">
-        <img src="images/logo.png"></img>
-      </div>
+        <div class="intro-text">
+            <img src="images/logo.png"></img>
+        </div>
     </div>
 
     <div class="parallax-content">
@@ -51,118 +51,84 @@
             <li class="accordion-item" data-accordion-item>
                 <a href="#" class="accordion-title">Tone Results</a>
                 <div class="accordion-content" data-tab-content>
-                  <div class="callout secondary">
-                    <p id="toneresults"></p>
-                  </div>
+                    <div class="callout secondary">
+                        <p id="toneresults"></p>
+                    </div>
 
                 </div>
                 <li class="accordion-item" data-accordion-item>
                     <a href="#" class="accordion-title">Suggestions</a>
                     <div class="accordion-content" data-tab-content>
-                    <div class="callout secondary">
-                      <p id="suggestions"></p>
-                    </div>
+                        <div class="callout secondary">
+                            <p id="suggestions"></p>
+                        </div>
 
                     </div>
         </ul>
         <br>
-        <section class="callout">
-            <!-- <h5><font color=#3D406B></font></h5> -->
-
-
-<div class="large-12 columns">
-  <table class="chart">
-    <tbody>
-      <tr>
-        <td>
-          <p class="percentage" id="angerID">49%</p>
-        </td>
-        <td class="chart">
-          Anger
-          <div class="barchart">
-            <span class="meter" style="width: 49%"></span>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p class="percentage" id="disgustID">44%</p>
-        </td>
-        <td class="chart">
-          Disgust
-          <div class="barchart">
-            <span class="meter" style="width: 44%"></span>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p class="percentage" id="fearID">41%</p>
-        </td>
-        <td class="chart">
-          Fear
-          <div class="barchart">
-            <span class="meter" style="width: 41%"></span>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p class="percentage" id="joyID">40%</p>
-        </td>
-        <td class="chart">
-          Joy
-          <div class="barchart">
-            <span class="meter" style="width: 40%"></span>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p class="percentage" id="sadnessID">40%</p>
-        </td>
-        <td class="chart">
-          Sadness
-          <div class="barchart">
-            <span class="meter" style="width: 40%"></span>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
-
-
-              <!-- <div class="fancyChart" id="fancywrapper">
-                 <table id="fancy data-table" border="1" cellpadding="10" cellspacing="0"
-                 summary="Emotional Tone Scores">
-                    <caption>Emotional Tone Scores</caption>
-                    <thead>
-                       <tr>
-                          <td>&nbsp;</td>
-                          <th scope="col">Anger</th>
-                          <th scope="col">Disgust</th>
-                          <th scope="col">Fear</th>
-                          <th scope="col">Joy</th>
-                          <th scope="col">Sadness</th>
-                       </tr>
-                    </thead>
+            <div class="large-12 columns callout">
+                <table class="chart">
                     <tbody>
-                       <tr>
-                          <th scope="row">Scores</th>
-                          <td>.07</td>
-                          <td>.02</td>
-                          <td>.5</td>
-                          <td>.4</td>
-                          <td>.9</td>
-                       </tr>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="angerID"></p>
+                            </td>
+                            <td class="chart">
+                                Anger
+                                <div class="barchart">
+                                    <span class="meter" id="angerBar"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="disgustID"></p>
+                            </td>
+                            <td class="chart">
+                                Disgust
+                                <div class="barchart">
+                                    <span class="meter" id="disgustBar"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="fearID"></p>
+                            </td>
+                            <td class="chart">
+                                Fear
+                                <div class="barchart">
+                                    <span class="meter" id="fearBar"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="joyID"></p>
+                            </td>
+                            <td class="chart">
+                                Joy
+                                <div class="barchart">
+                                    <span class="meter" id="joyBar"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="sadnessID"></p>
+                            </td>
+                            <td class="chart">
+                                Sadness
+                                <div class="barchart">
+                                    <span class="meter" id="sadnessBar"></span>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
-                 </table>
-              </div> -->
-
-        </section>
-        <br>
+                </table>
+            </div>
+    </div>
+    <br>
 
     </div>
 
@@ -171,9 +137,9 @@
     </script>
     <footer>
         <div class="parallax-footer">
-          <div class="footertext">
-            <small><font color=#a1a1a1>&copy; Cassandra Torske 2016</font></small>
-          </div>
+            <div class="footertext">
+                <small><font color=#a1a1a1>&copy; Cassandra Torske 2016</font></small>
+            </div>
         </div>
     </footer>
 </body>
