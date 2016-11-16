@@ -7,16 +7,24 @@
     <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.js"></script>
     <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/js/foundation.accordion.js"></script>
     <script src="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/js/foundation.accordionMenu.js"></script>
+    <script src="app.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="custom.css">
 </head>
 
 <body>
     <div class="parallax-background">
-        <div class="intro-text">
-            textSENSE
-            
-            <p><i class="fi-arrow-down"></i></p>
-        </div>
+      <nav role="navigation">
+        <ul id="menu" class="overlay-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a class="toggle-menu" href="#menu"><i class="fi-plus"></i></a>
+      </nav>
+
+      <div class="intro-text">
+        <img src="images/logo.png"></img>
+      </div>
     </div>
 
     <div class="parallax-content">
@@ -40,21 +48,54 @@
         </form>
         <br>
         <ul class="accordion" data-accordion data-multi-expand="true">
-            <li class="accordion-item" id="toneresults" data-accordion-item>
+            <li class="accordion-item" data-accordion-item>
                 <a href="#" class="accordion-title">Tone Results</a>
                 <div class="accordion-content" data-tab-content>
+                  <div class="callout secondary">
                     <p id="toneresults"></p>
+                  </div>
+
                 </div>
                 <li class="accordion-item" data-accordion-item>
                     <a href="#" class="accordion-title">Suggestions</a>
                     <div class="accordion-content" data-tab-content>
-                        displays suggestions
+                    <div class="callout secondary">
+                      <p id="suggestions"></p>
+                    </div>
+
                     </div>
         </ul>
         <br>
         <section class="callout">
             <h5><font color=#3D406B>Emotional Tone Graph</font></h5>
-            <p></p>
+
+              <div class="fancyChart" id="fancyWrapper">
+                 <table id="fancy data-table" border="1" cellpadding="10" cellspacing="0"
+                 summary="Emotional Tone Scores">
+                    <caption>Scores between 0 and 1</caption>
+                    <thead>
+                       <tr>
+                          <td>&nbsp;</td>
+                          <th scope="col">Anger</th>
+                          <th scope="col">Disgust</th>
+                          <th scope="col">Fear</th>
+                          <th scope="col">Joy</th>
+                          <th scope="col">Sadness</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                       <tr>
+                          <th scope="row">Scores</th>
+                          <td>.07</td>
+                          <td>.02</td>
+                          <td>.5</td>
+                          <td>.4</td>
+                          <td>.9</td>
+                       </tr>
+                    </tbody>
+                 </table>
+              </div>
+
         </section>
         <br>
 
@@ -65,10 +106,11 @@
     </script>
     <footer>
         <div class="parallax-footer">
-            <small>&copy; Cassandra Torske 2016</small>
+          <div class="footertext">
+            <small><font color=#a1a1a1>&copy; Cassandra Torske 2016</font></small>
+          </div>
         </div>
     </footer>
-    <script src="app.js" charset="utf-8"></script>
 </body>
 
 </html>
