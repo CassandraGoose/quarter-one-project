@@ -254,20 +254,30 @@ function highestScore(scoreEmotionArray) {
     }
   }
   if (maxIndex === 0) {
-    $('#suggestions').append(new Option("Your text scored highest in Anger. If this is the tone you are aiming for, keep up the good work. If it is not the tone your are aiming for, consider rephrasing your text using words with happy, sad, fearful, or disgustful connotations."))
-      // $('option').addClass("textSuggestions")
+    $('#suggestions').append(new Option("Your text scored highest in Anger."))
+    $('#suggestions').append(new Option("If this is the tone you are aiming for, keep up the good work."))
+    $('#suggestions').append(new Option("If it is not the tone your are aiming for, consider rephrasing your text using words with happy,"))
+    $('#suggestions').append(new Option("sad, fearful, or disgustful connotations."))
   } else if (maxIndex === 1) {
-    $('#suggestions').append(new Option("Your text scored highest in Disgust. If this is the tone you are aiming for, great job! If it is not the tone you are aiming for, consider rephrasing your text using words with happy, sad, fearful, or angry connotations."))
-      // $('option').addClass("textSuggestions")
+    $('#suggestions').append(new Option("Your text scored highest in Disgust."))
+    $('#suggestions').append(new Option("If this is the tone you are aiming for, great job!"))
+    $('#suggestions').append(new Option("If it is not the tone you are aiming for, consider rephrasing your text using words with happy,"))
+    $('#suggestions').append(new Option("sad, fearful, or angry connotations."))
   } else if (maxIndex === 2) {
-    $('#suggestions').append(new Option("Your text scored highest in Fear. If this is the tone you are aiming for, keep it up. If it is not the tone you are aiming for, consider rephrasing your text using words with happy, sad, disgustful, or angry connotations."))
-      // $('option').addClass("textSuggestions")
+    $('#suggestions').append(new Option("Your text scored highest in Fear."))
+    $('#suggestions').append(new Option("If this is the tone you are aiming for, keep it up."))
+    $('#suggestions').append(new Option("If it is not the tone you are aiming for, consider rephrasing your text using words with happy,"))
+    $('#suggestions').append(new Option("sad, disgustful, or angry connotations."))
   } else if (maxIndex === 3) {
-    $('#suggestions').append(new Option("Your text scored highest in Joy. If this is the tone you are aiming for, keep up the great work. If it is not the tone you are aiming for, consider rephrasing your text using words with sad, disgustful, fearful, or angry connotations."))
-      // $('option').addClass("textSuggestions")
+    $('#suggestions').append(new Option("Your text scored highest in Joy."))
+    $('#suggestions').append(new Option("If this is the tone you are aiming for, keep up the great work."))
+    $('#suggestions').append(new Option("If it is not the tone you are aiming for, consider rephrasing your text using words with sad,"))
+    $('#suggestions').append(new Option("disgustful, fearful, or angry connotations."))
   } else if (maxIndex === 4) {
-    $('#suggestions').append(new Option("Your text scored highest in Sadness. If this is the tone you are aiming for, you're on the right path. If it is not the tone you are aiming for, consider rephrasing your text using words with happy, disgustful, fearful, or angry connotations."))
-      // $('option').addClass("textSuggestions")
+    $('#suggestions').append(new Option("Your text scored highest in Sadness."))
+    $('#suggestions').append(new Option("If this is the tone you are aiming for, you're on the right path."))
+    $('#suggestions').append(new Option("If it is not the tone you are aiming for, consider rephrasing your text using words with happy,"))
+    $('#suggestions').append(new Option("disgustful, fearful, or angry connotations."))
   } else {
     $('#suggestions').append(new Option("Your text scores are even. Try adding more text next time."))
       // $('option').addClass("textSuggestions")

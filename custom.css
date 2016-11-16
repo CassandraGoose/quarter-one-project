@@ -5671,7 +5671,7 @@ body {
 }
 
 .parallax-content {
-    max-width: 100%;
+    max-width: auto;
     position: relative;
     top: 500px;
     padding: 50px;
