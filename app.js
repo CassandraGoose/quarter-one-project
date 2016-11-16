@@ -100,6 +100,10 @@ var returnedObject = {
   }
 }
 
+function appendGraph(scoreEmotionArray) {
+
+}
+
 function appendTone(returnedObject) {
   $('#toneresults').append(new Option(angerScore(angerObjectScore)))
   $('#toneresults').append(new Option(disgustScore(disgustObjectScore)))
