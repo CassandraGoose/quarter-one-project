@@ -13,11 +13,21 @@ $(document).ready(function() {
     })
   })
 
-
-  $('reset').on('click', function(event) {
-    event.preventDefault()
-      // $('#toneresults').remove()
+  $('#clearjq').on('click', function(event) {
+    // $('#toneresults').remove()
     $('#toneresults').html('')
+    $('#suggestions').html('')
+    $('#socialtoneresults').html('')
+    $('#socialsuggestions').html('')
+    $('#angerID').html('')
+    $('#fearID').html('')
+    $('#disgustID').html('')
+    $('#sadnessID').html('')
+    $('#joyID').html('')
+    $('#opennessID').html('')
+    $('#conscientiousnessID').html('')
+    $('#agreeablenessID').html('')
+    $('#extraversionID').html('')
 
   })
 
@@ -48,6 +58,7 @@ function apiInfo(result) {
   var extraversionObjectName = result.document_tone.tone_categories[2].tones[2].tone_name
   var agreeablenessObjectScore = result.document_tone.tone_categories[2].tones[3].score
   var agreeablenessObjectName = result.document_tone.tone_categories[2].tones[3].tone_name
+
   var scoreEmotionArray = [angerObjectScore, disgustObjectScore, fearObjectScore, joyObjectScore, sadnessObjectScore]
 
   var scoreSocialArray = [opennessObjectScore, conscientiousnessObjectScore, extraversionObjectScore, agreeablenessObjectScore]
@@ -290,13 +301,3 @@ function apiInfo(result) {
   highestScore(scoreEmotionArray)
   highestSocialScore(scoreSocialArray)
 }
-
-
-
-
-
-
-
-
-
-// console.log(extraversionScore(extraversionObjectScore))
