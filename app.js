@@ -8,6 +8,17 @@ $(document).ready(function() {
     event.preventDefault()
     var inputText = $('#thisarea').val()
     callAPI(inputText)
+    $('#successful').append("Success!").fadeIn(1000, function() {
+      $(this).delay(2000).fadeOut(500)
+    })
+  })
+
+
+  $('reset').on('click', function(event) {
+    event.preventDefault()
+      // $('#toneresults').remove()
+    $('#toneresults').html('')
+
   })
 
   function callAPI(inputText) {

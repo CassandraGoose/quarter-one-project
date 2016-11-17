@@ -5801,3 +5801,7 @@ p.percentage {
   color: #3D406B;
   font-weight: 300;
   }
+
+.spaces {
+  margin-right: 5px;
+}
