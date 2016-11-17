@@ -10,17 +10,15 @@ $(document).ready(function() {
     }
   });
 
-  $('#thisbutton').on('click', function(event) {
+  $('form').on('submit', function(event) {
     event.preventDefault()
     var inputText = $('#thisarea').val()
     callAPI(inputText)
     $('#successful').append("Success!").fadeIn(500, function() {
-      $(this).delay(2000).fadeOut(500)
+      $(this).delay(4000).fadeOut(500)
     })
     $('#successful').html('<img src="images/icon1.png"><img src="images/icon1.png"><img src="images/icon1.png"><img src="images/icon1.png">')
   })
-
-
 
   $('#clearjq').on('click', function(event) {
     // $('#toneresults').remove()
