@@ -206,7 +206,7 @@ function apiInfo(result) {
     $('#sadnessID').append(sadnessPercent)
     $('#angerBar').css('width', "" + angerPercent + "")
     $('#disgustBar').css('width', "" + disgustPercent + "")
-    $('#fearBar').css('width', "" + disgustPercent + "")
+    $('#fearBar').css('width', "" + fearPercent + "")
     $('#joyBar').css('width', "" + joyPercent + "")
     $('#sadnessBar').css('width', "" + sadnessPercent + "")
 
