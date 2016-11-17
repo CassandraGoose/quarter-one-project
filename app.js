@@ -12,18 +12,10 @@ $(document).ready(function() {
 
   function callAPI(inputText) {
     $.get('https://watson-tone-analyzer.herokuapp.com/?version=2016-05-19&text=' + inputText, function(result) {
-
-
       apiInfo(result)
     })
-
-
   }
-
 })
-
-
-
 
 function apiInfo(result) {
   var angerObjectScore = result.document_tone.tone_categories[0].tones[0].score
@@ -186,7 +178,7 @@ function apiInfo(result) {
 
   function highestScore(scoreEmotionArray) {
     var max = scoreEmotionArray[0]
-    var madIndex = 0
+    var maxIndex = 0
     for (var i = 0; i < scoreEmotionArray.length; i++) {
       if (scoreEmotionArray[i] > max) {
         maxIndex = i
@@ -196,7 +188,7 @@ function apiInfo(result) {
     if (maxIndex === 0) {
       $('#suggestions').append(new Option("Your text scored highest in Anger."))
       $('#suggestions').append(new Option("If this is the tone you are aiming for, keep up the good work."))
-      $('#suggestions').append(new Option("If it is not the tone your are aiming for, consider rephrasing your text using words with happy,"))
+      $('#suggestions').append(new Option("If it is not the tone you are aiming for, consider rephrasing your text using words with happy,"))
       $('#suggestions').append(new Option("sad, fearful, or disgustful connotations."))
     } else if (maxIndex === 1) {
       $('#suggestions').append(new Option("Your text scored highest in Disgust."))

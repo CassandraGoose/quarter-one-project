@@ -5676,6 +5676,7 @@ body {
     max-width: auto;
     height: 100%;
     position: relative;
+    overflow-y: scroll;
     top: 500px;
     padding: 50px;
     font-size: 20px;
