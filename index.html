@@ -28,11 +28,11 @@
     </div>
 
     <div class="parallax-content">
-        <p class="text-center">textSENSE allows you to paste any English text into the textbox and receive information on the emotional tone that the text expresses. It also supplies suggestions on adjusting the emotional tone of the text and displays a visual. </p>
+        <p class="text-center">textSENSE allows you to type or paste any English text into the textbox and receive information on the social and emotional tone that the text expresses. It also supplies suggestions on adjusting the tone of the text.</p>
         <br>
         <hr>
         <br>
-        <h4><font color=#a1a1a1>When you submit your text, you will receive scores on Anger, Disgust, Fear, Joy, and Sadness. The boxes below will provide details on the emotional tone of your text.</font></h4>
+        <h4><font color=#a1a1a1>When you submit your text, you will receive scores on the Emotional and Social Tone below.</font></h4>
         <br>
         <form>
             <div class="row">
@@ -49,7 +49,7 @@
         <br>
         <ul class="accordion" data-accordion data-multi-expand="true">
             <li class="accordion-item" data-accordion-item>
-                <a href="#" class="accordion-title">Tone Results</a>
+                <a href="#" class="accordion-title">Emotional Tone Results</a>
                 <div class="accordion-content" data-tab-content>
                     <div class="callout secondary">
                         <p id="toneresults"></p>
@@ -65,7 +65,23 @@
                     </div>
         </ul>
         <br>
+        <ul class="accordion" data-accordion data-multi-expand="true">
+            <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Social Tone Results</a>
+                <div class="accordion-content" data-tab-content>
+                    <div class="callout secondary">
+                        <p id="socialtoneresults"></p>
+                    </div>
 
+                </div>
+                <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Suggestions</a>
+                    <div class="accordion-content" data-tab-content>
+                        <div class="callout secondary">
+                            <p id="socialsuggestions"></p>
+                        </div>
+                    </div>
+        </ul>
             <div class="large-12 columns callout">
                 <table class="chart">
                     <tbody>
@@ -127,6 +143,61 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="large-12 columns callout">
+                <table class="chart">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="opennessID"></p>
+                            </td>
+                            <td class="chart">
+                                Openness
+                                <div class="barchart">
+                                    <span class="meter" id="opennessBar"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="conscientiousnessID"></p>
+                            </td>
+                            <td class="chart">
+                                Conscientiousness
+                                <div class="barchart">
+                                    <span class="meter" id="conscientiousnessBar"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="extraversionID"></p>
+                            </td>
+                            <td class="chart">
+                                Extraversion
+                                <div class="barchart">
+                                    <span class="meter" id="extraversionBar"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="percentage" id="agreeablenessID"></p>
+                            </td>
+                            <td class="chart">
+                                Agreeableness
+                                <div class="barchart">
+                                    <span class="meter" id="agreeablenessBar"></span>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
     </div>
     <br>
     <br>

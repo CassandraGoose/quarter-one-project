@@ -5745,7 +5745,7 @@ body {
   .overlay-menu a {
     display: block;
     color: #a1a1a1;
-    font-weight: bold;
+    font-size: 42px;
     height: 6.25rem;
     line-height: 6.25rem;
     text-decoration: none; }

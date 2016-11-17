@@ -49,6 +49,13 @@ function apiInfo(result) {
     $('#toneresults').append(new Option(sadnessScore(sadnessObjectScore)))
   }
 
+  function appendSocialTone(result) {
+    $('#socialtoneresults').append(new Option(opennessScore(angerObjectScore)))
+    $('#socialtoneresults').append(new Option(conscientiousnessScore(disgustObjectScore)))
+    $('#socialtoneresults').append(new Option(extraversionScore(fearObjectScore)))
+    $('#socialtoneresults').append(new Option(agreeablenessScore(joyObjectScore)))
+  }
+
   function angerScore(angerObjectScore) {
     if (angerObjectScore < .5) {
       var angerReturn = "anger score is not high"
@@ -109,53 +116,53 @@ function apiInfo(result) {
     return "Your " + returnThis + "."
   }
 
-  // function opennessScore(opennessObjectScore) {
-  //   if (opennessObjectScore < .5) {
-  //     var opennessReturn = "openness score is not high"
-  //   } else if (angerObjectScore >= .5) {
-  //     var opennessReturn = "openness score is medium"
-  //   } else {
-  //     var opennessReturn = "openness score is high"
-  //   }
-  //   var returnThis = opennessReturn
-  //   return "Your " + returnThis + "."
-  // }
+  function opennessScore(opennessObjectScore) {
+    if (opennessObjectScore < .5) {
+      var opennessReturn = "openness score is not high"
+    } else if (angerObjectScore >= .5) {
+      var opennessReturn = "openness score is medium"
+    } else {
+      var opennessReturn = "openness score is high"
+    }
+    var returnThis = opennessReturn
+    return "Your " + returnThis + "."
+  }
 
-  // function conscientiousnessScore(conscientiousnessObjectScore) {
-  //   if (conscientiousnessObjectScore < .5) {
-  //     var conscientiousnessReturn = "conscientiousness score is not high"
-  //   } else if (angerObjectScore >= .5) {
-  //     var conscientiousnessReturn = "conscientiousness score is medium"
-  //   } else {
-  //     var conscientiousnessReturn = "conscientiousness score is high"
-  //   }
-  //   var returnThis = conscientiousnessReturn
-  //   return "Your " + returnThis + "."
-  // }
+  function conscientiousnessScore(conscientiousnessObjectScore) {
+    if (conscientiousnessObjectScore < .5) {
+      var conscientiousnessReturn = "conscientiousness score is not high"
+    } else if (angerObjectScore >= .5) {
+      var conscientiousnessReturn = "conscientiousness score is medium"
+    } else {
+      var conscientiousnessReturn = "conscientiousness score is high"
+    }
+    var returnThis = conscientiousnessReturn
+    return "Your " + returnThis + "."
+  }
 
-  // function extraversionScore(extraversionObjectScore) {
-  //   if (extraversionObjectScore < .5) {
-  //     var extraversionReturn = "extraversion score is not high"
-  //   } else if (angerObjectScore >= .5) {
-  //     var extraversionReturn = "extraversion score is medium"
-  //   } else {
-  //     var extraversionReturn = "extraversion score is high"
-  //   }
-  //   var returnThis = extraversionReturn
-  //   return "Your " + returnThis + "."
-  // }
+  function extraversionScore(extraversionObjectScore) {
+    if (extraversionObjectScore < .5) {
+      var extraversionReturn = "extraversion score is not high"
+    } else if (angerObjectScore >= .5) {
+      var extraversionReturn = "extraversion score is medium"
+    } else {
+      var extraversionReturn = "extraversion score is high"
+    }
+    var returnThis = extraversionReturn
+    return "Your " + returnThis + "."
+  }
 
-  // function aggreeablenessScore(aggreeablenessObjectScore) {
-  //   if (aggreeablenessObjectScore < .5) {
-  //     var aggreeablenessReturn = "aggreeableness score is not high"
-  //   } else if (angerObjectScore >= .5) {
-  //     var aggreeablenessReturn = "aggreeableness score is medium"
-  //   } else {
-  //     var aggreeablenessReturn = "aggreeableness score is high"
-  //   }
-  //   var returnThis = aggreeablenessReturn
-  //   return "Your " + returnThis + "."
-  // }
+  function agreeablenessScore(agreeablenessObjectScore) {
+    if (agreeablenessObjectScore < .5) {
+      var agreeablenessReturn = "agreeableness score is not high"
+    } else if (angerObjectScore >= .5) {
+      var agreeablenessReturn = "agreeableness score is medium"
+    } else {
+      var agreeablenessReturn = "agreeableness score is high"
+    }
+    var returnThis = agreeablenessReturn
+    return "Your " + returnThis + "."
+  }
 
   function appendPercent(scoreEmotionArray) {
     var angerPercent = angerObjectScore * 100 + "%"
@@ -173,6 +180,22 @@ function apiInfo(result) {
     $('#fearBar').css('width', "" + disgustPercent + "")
     $('#joyBar').css('width', "" + joyPercent + "")
     $('#sadnessBar').css('width', "" + sadnessPercent + "")
+
+  }
+
+  function appendSocialPercent(scoreEmotionArray) {
+    var opennessPercent = opennessObjectScore * 100 + "%"
+    var conscientiousnessPercent = conscientiousnessObjectScore * 100 + "%"
+    var extraversionPercent = extraversionObjectScore * 100 + "%"
+    var agreeablenessPercent = agreeablenessObjectScore * 100 + "%"
+    $('#opennessID').append(opennessPercent)
+    $('#conscientiousnessID').append(conscientiousnessPercent)
+    $('#extraversionID').append(extraversionPercent)
+    $('#agreeablenessID').append(agreeablenessPercent)
+    $('#opennessBar').css('width', "" + opennessPercent + "")
+    $('#conscientiousnessBar').css('width', "" + conscientiousnessPercent + "")
+    $('#extraversionBar').css('width', "" + extraversionPercent + "")
+    $('#agreeablenessBar').css('width', "" + agreeablenessPercent + "")
 
   }
 
@@ -215,14 +238,46 @@ function apiInfo(result) {
         // $('option').addClass("textSuggestions")
     }
   }
+
+  function highestSocialScore(scoreSocialArray) {
+    var max = scoreSocialArray[0]
+    var maxIndex = 0
+    for (var i = 0; i < scoreSocialArray.length; i++) {
+      if (scoreSocialArray[i] > max) {
+        maxIndex = i
+        max = scoreSocialArray[i]
+      }
+    }
+    if (maxIndex === 0) {
+      $('#socialsuggestions').append(new Option("Your text scored highest in Openness."))
+      $('#socialsuggestions').append(new Option("People may respond to you better if you are open."))
+    } else if (maxIndex === 1) {
+      $('#socialsuggestions').append(new Option("Your text scored highest in conscientiousness."))
+      $('#socialsuggestions').append(new Option("Your text likely makes the reader feel more comfortable."))
+    } else if (maxIndex === 2) {
+      $('#socialsuggestions').append(new Option("Your text scored highest in Extraversion."))
+      $('#socialsuggestions').append(new Option("Your text likely makes the reader focus on you. "))
+      $('#socialsuggestions').append(new Option("If you would like the reader to focus more on themselves, change the wording."))
+    } else if (maxIndex === 3) {
+      $('#socialsuggestions').append(new Option("Your text scored highest in Agreeableness."))
+      $('#socialsuggestions').append(new Option("The reader may find your text easy to relate to."))
+    } else {
+      $('#suggestions').append(new Option("Your text scores are even. Try adding more text next time."))
+        // $('option').addClass("textSuggestions")
+    }
+  }
+
   appendTone(result)
+  appendSocialTone(result)
   angerScore(angerObjectScore)
   disgustScore(disgustObjectScore)
   fearScore(fearObjectScore)
   joyScore(joyObjectScore)
   sadnessScore(sadnessObjectScore)
   appendPercent(scoreEmotionArray)
+  appendSocialPercent(scoreEmotionArray)
   highestScore(scoreEmotionArray)
+  highestSocialScore(scoreSocialArray)
 }
 
 
