@@ -79,10 +79,10 @@ function apiInfo(result) {
   }
 
   function appendSocialTone(result) {
-    $('#socialtoneresults').append(new Option(opennessScore(angerObjectScore)))
-    $('#socialtoneresults').append(new Option(conscientiousnessScore(disgustObjectScore)))
-    $('#socialtoneresults').append(new Option(extraversionScore(fearObjectScore)))
-    $('#socialtoneresults').append(new Option(agreeablenessScore(joyObjectScore)))
+    $('#socialtoneresults').append(new Option(opennessScore(opennessObjectScore)))
+    $('#socialtoneresults').append(new Option(conscientiousnessScore(conscientiousnessObjectScore)))
+    $('#socialtoneresults').append(new Option(extraversionScore(extraversionObjectScore)))
+    $('#socialtoneresults').append(new Option(agreeablenessScore(agreeablenessObjectScore)))
   }
 
   function angerScore(angerObjectScore) {
@@ -182,12 +182,14 @@ function apiInfo(result) {
   }
 
   function agreeablenessScore(agreeablenessObjectScore) {
+    console.log(agreeablenessObjectScore)
     if (agreeablenessObjectScore < .5) {
       var agreeablenessReturn = "agreeableness score is low"
     } else if (agreeablenessObjectScore === .5) {
       var agreeablenessReturn = "agreeableness score is medium"
     } else if (agreeablenessObjectScore > .5) {
       var agreeablenessReturn = "agreeableness score is high"
+
     }
     var returnThis = agreeablenessReturn
     return "Your " + returnThis + "."
