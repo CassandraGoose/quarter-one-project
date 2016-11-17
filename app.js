@@ -14,9 +14,10 @@ $(document).ready(function() {
     event.preventDefault()
     var inputText = $('#thisarea').val()
     callAPI(inputText)
-    $('#successful').append("Success!").fadeIn(1000, function() {
+    $('#successful').append("Success!").fadeIn(500, function() {
       $(this).delay(2000).fadeOut(500)
     })
+    $('#successful').html('<img src="images/icon1.png"><img src="images/icon1.png"><img src="images/icon1.png"><img src="images/icon1.png">')
   })
 
 
