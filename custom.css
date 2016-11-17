@@ -5779,7 +5779,6 @@ body {
   background: #3D406B;
   height: 100%;
   display: block;
-
 }
 
 table.chart {
@@ -5795,11 +5794,10 @@ table tr.even, table tr.alt, table tr:nth-of-type(even) {
 td.chart {
   font-size: 14px;
   margin-bottom: 50px;
-  padding: 0 0 2 0;
 }
 
 p.percentage {
-  font-size: 30px !important;
+  font-size: 24px !important;
   color: #3D406B;
   font-weight: 300;
   }

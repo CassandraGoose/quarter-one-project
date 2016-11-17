@@ -47,8 +47,10 @@
             </div>
         </form>
         <br>
-        <ul class="accordion" data-accordion data-multi-expand="true">
-            <li class="accordion-item" data-accordion-item>
+
+        <br>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+            <li class="accordion-item is-active" data-accordion-item>
                 <a href="#" class="accordion-title">Emotional Tone Results</a>
                 <div class="accordion-content" data-tab-content>
                     <div class="callout secondary">
@@ -64,9 +66,10 @@
                         </div>
                     </div>
         </ul>
+
         <br>
-        <ul class="accordion" data-accordion data-multi-expand="true">
-            <li class="accordion-item" data-accordion-item>
+        <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+            <li class="accordion-item is-active" data-accordion-item>
                 <a href="#" class="accordion-title">Social Tone Results</a>
                 <div class="accordion-content" data-tab-content>
                     <div class="callout secondary">
@@ -82,119 +85,122 @@
                         </div>
                     </div>
         </ul>
-            <div class="large-12 columns callout">
-                <table class="chart">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="angerID"></p>
-                            </td>
-                            <td class="chart">
-                                Anger
-                                <div class="barchart">
-                                    <span class="meter" id="angerBar"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="disgustID"></p>
-                            </td>
-                            <td class="chart">
-                                Disgust
-                                <div class="barchart">
-                                    <span class="meter" id="disgustBar"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="fearID"></p>
-                            </td>
-                            <td class="chart">
-                                Fear
-                                <div class="barchart">
-                                    <span class="meter" id="fearBar"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="joyID"></p>
-                            </td>
-                            <td class="chart">
-                                Joy
-                                <div class="barchart">
-                                    <span class="meter" id="joyBar"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="sadnessID"></p>
-                            </td>
-                            <td class="chart">
-                                Sadness
-                                <div class="barchart">
-                                    <span class="meter" id="sadnessBar"></span>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+<br>
+        <div class="large-12 columns callout">
+          <p> Emotional Tones </p>
+            <table class="chart">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="angerID"></p>
+                        </td>
+                        <td class="chart">
+                            Anger
+                            <div class="barchart">
+                                <span class="meter" id="angerBar"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="disgustID"></p>
+                        </td>
+                        <td class="chart">
+                            Disgust
+                            <div class="barchart">
+                                <span class="meter" id="disgustBar"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="fearID"></p>
+                        </td>
+                        <td class="chart">
+                            Fear
+                            <div class="barchart">
+                                <span class="meter" id="fearBar"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="joyID"></p>
+                        </td>
+                        <td class="chart">
+                            Joy
+                            <div class="barchart">
+                                <span class="meter" id="joyBar"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="sadnessID"></p>
+                        </td>
+                        <td class="chart">
+                            Sadness
+                            <div class="barchart">
+                                <span class="meter" id="sadnessBar"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <div class="large-12 columns callout">
-                <table class="chart">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="opennessID"></p>
-                            </td>
-                            <td class="chart">
-                                Openness
-                                <div class="barchart">
-                                    <span class="meter" id="opennessBar"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="conscientiousnessID"></p>
-                            </td>
-                            <td class="chart">
-                                Conscientiousness
-                                <div class="barchart">
-                                    <span class="meter" id="conscientiousnessBar"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="extraversionID"></p>
-                            </td>
-                            <td class="chart">
-                                Extraversion
-                                <div class="barchart">
-                                    <span class="meter" id="extraversionBar"></span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="percentage" id="agreeablenessID"></p>
-                            </td>
-                            <td class="chart">
-                                Agreeableness
-                                <div class="barchart">
-                                    <span class="meter" id="agreeablenessBar"></span>
-                                </div>
-                            </td>
-                        </tr>
+        <div class="large-12 columns callout">
+            <p> Socail Tones </p>
+            <table class="chart">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="opennessID"></p>
+                        </td>
+                        <td class="chart">
+                            Openness
+                            <div class="barchart">
+                                <span class="meter" id="opennessBar"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="conscientiousnessID"></p>
+                        </td>
+                        <td class="chart">
+                            Conscientiousness
+                            <div class="barchart">
+                                <span class="meter" id="conscientiousnessBar"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="extraversionID"></p>
+                        </td>
+                        <td class="chart">
+                            Extraversion
+                            <div class="barchart">
+                                <span class="meter" id="extraversionBar"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="percentage" id="agreeablenessID"></p>
+                        </td>
+                        <td class="chart">
+                            Agreeableness
+                            <div class="barchart">
+                                <span class="meter" id="agreeablenessBar"></span>
+                            </div>
+                        </td>
+                    </tr>
 
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
+        </div>
 
 
 
