@@ -87,8 +87,8 @@ function apiInfo(result) {
 
   function angerScore(angerObjectScore) {
     if (angerObjectScore < .5) {
-      var angerReturn = "anger score is not high"
-    } else if (angerObjectScore >= .5) {
+      var angerReturn = "anger score is low"
+    } else if (angerObjectScore === .5) {
       var angerReturn = "anger score is medium"
     } else {
       var angerReturn = "anger score is high"
@@ -99,8 +99,8 @@ function apiInfo(result) {
 
   function disgustScore(disgustObjectScore) {
     if (disgustObjectScore < .5) {
-      var disgustReturn = "disgust score is not high"
-    } else if (angerObjectScore >= .5) {
+      var disgustReturn = "disgust score is low"
+    } else if (disgustObjectScore === .5) {
       var disgustReturn = "disgust score is medium"
     } else {
       var disgustReturn = "disgust score is high"
@@ -111,8 +111,8 @@ function apiInfo(result) {
 
   function fearScore(fearObjectScore) {
     if (fearObjectScore < .5) {
-      var fearReturn = "fear score is not high"
-    } else if (angerObjectScore >= .5) {
+      var fearReturn = "fear score is low"
+    } else if (fearObjectScore === .5) {
       var fearReturn = "fear score is medium"
     } else {
       var fearReturn = "fear score is high"
@@ -123,8 +123,8 @@ function apiInfo(result) {
 
   function joyScore(joyObjectScore) {
     if (joyObjectScore < .5) {
-      var joyReturn = "joy score is not high"
-    } else if (angerObjectScore >= .5) {
+      var joyReturn = "joy score is low"
+    } else if (joyObjectScore === .5) {
       var joyReturn = "joy score is medium"
     } else {
       var joyReturn = "joy score is high"
@@ -135,8 +135,8 @@ function apiInfo(result) {
 
   function sadnessScore(sadnessObjectScore) {
     if (sadnessObjectScore < .5) {
-      var sadnessReturn = "sadness score is not high"
-    } else if (angerObjectScore >= .5) {
+      var sadnessReturn = "sadness score is low"
+    } else if (sadnessObjectScore === .5) {
       var sadnessReturn = "sadness score is medium"
     } else {
       var sadnessReturn = "sadness score is high"
@@ -147,8 +147,8 @@ function apiInfo(result) {
 
   function opennessScore(opennessObjectScore) {
     if (opennessObjectScore < .5) {
-      var opennessReturn = "openness score is not high"
-    } else if (angerObjectScore >= .5) {
+      var opennessReturn = "openness score is low"
+    } else if (opennessObjectScore === .5) {
       var opennessReturn = "openness score is medium"
     } else {
       var opennessReturn = "openness score is high"
@@ -159,8 +159,8 @@ function apiInfo(result) {
 
   function conscientiousnessScore(conscientiousnessObjectScore) {
     if (conscientiousnessObjectScore < .5) {
-      var conscientiousnessReturn = "conscientiousness score is not high"
-    } else if (angerObjectScore >= .5) {
+      var conscientiousnessReturn = "conscientiousness score is low"
+    } else if (conscientiousnessObjectScore === .5) {
       var conscientiousnessReturn = "conscientiousness score is medium"
     } else {
       var conscientiousnessReturn = "conscientiousness score is high"
@@ -171,8 +171,8 @@ function apiInfo(result) {
 
   function extraversionScore(extraversionObjectScore) {
     if (extraversionObjectScore < .5) {
-      var extraversionReturn = "extraversion score is not high"
-    } else if (angerObjectScore >= .5) {
+      var extraversionReturn = "extraversion score is low"
+    } else if (extraversionObjectScore === .5) {
       var extraversionReturn = "extraversion score is medium"
     } else {
       var extraversionReturn = "extraversion score is high"
@@ -183,10 +183,10 @@ function apiInfo(result) {
 
   function agreeablenessScore(agreeablenessObjectScore) {
     if (agreeablenessObjectScore < .5) {
-      var agreeablenessReturn = "agreeableness score is not high"
-    } else if (angerObjectScore >= .5) {
+      var agreeablenessReturn = "agreeableness score is low"
+    } else if (agreeablenessObjectScore === .5) {
       var agreeablenessReturn = "agreeableness score is medium"
-    } else {
+    } else if (agreeablenessObjectScore > .5) {
       var agreeablenessReturn = "agreeableness score is high"
     }
     var returnThis = agreeablenessReturn
