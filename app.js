@@ -4,6 +4,12 @@ $(document).ready(function() {
     $("#menu").toggleClass("is-open")
   })
 
+  $('#thisarea').keypress(function(event) {
+    if (event.keyCode == 13) {
+      $('#thisbutton').click()
+    }
+  });
+
   $('#thisbutton').on('click', function(event) {
     event.preventDefault()
     var inputText = $('#thisarea').val()
@@ -12,6 +18,8 @@ $(document).ready(function() {
       $(this).delay(2000).fadeOut(500)
     })
   })
+
+
 
   $('#clearjq').on('click', function(event) {
     // $('#toneresults').remove()
