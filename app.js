@@ -46,24 +46,24 @@ $(document).ready(function() {
 })
 
 function apiInfo(result) {
-  var angerObjectScore = result.document_tone.tone_categories[0].tones[0].score
+  var angerObjectScore = result.document_tone.tone_categories[0].tones[0].score.toFixed(2)
   var angerObjectName = result.document_tone.tone_categories[0].tones[0].tone_name
-  var disgustObjectScore = result.document_tone.tone_categories[0].tones[1].score
+  var disgustObjectScore = result.document_tone.tone_categories[0].tones[1].score.toFixed(2)
   var disgustObjectName = result.document_tone.tone_categories[0].tones[1].tone_name
-  var fearObjectScore = result.document_tone.tone_categories[0].tones[2].score
+  var fearObjectScore = result.document_tone.tone_categories[0].tones[2].score.toFixed(2)
   var fearObjectName = result.document_tone.tone_categories[0].tones[2].tone_name
-  var joyObjectScore = result.document_tone.tone_categories[0].tones[3].score
+  var joyObjectScore = result.document_tone.tone_categories[0].tones[3].score.toFixed(2)
   var joyObjectName = result.document_tone.tone_categories[0].tones[3].tone_name
-  var sadnessObjectScore = result.document_tone.tone_categories[0].tones[4].score
+  var sadnessObjectScore = result.document_tone.tone_categories[0].tones[4].score.toFixed(2)
   var sadnessObjectName = result.document_tone.tone_categories[0].tones[4].tone_name
 
-  var opennessObjectScore = result.document_tone.tone_categories[2].tones[0].score
+  var opennessObjectScore = result.document_tone.tone_categories[2].tones[0].score.toFixed(2)
   var opennessObjectName = result.document_tone.tone_categories[2].tones[0].tone_name
-  var conscientiousnessObjectScore = result.document_tone.tone_categories[2].tones[1].score
+  var conscientiousnessObjectScore = result.document_tone.tone_categories[2].tones[1].score.toFixed(2)
   var conscientiousnessObjectName = result.document_tone.tone_categories[2].tones[1].tone_name
-  var extraversionObjectScore = result.document_tone.tone_categories[2].tones[2].score
+  var extraversionObjectScore = result.document_tone.tone_categories[2].tones[2].score.toFixed(2)
   var extraversionObjectName = result.document_tone.tone_categories[2].tones[2].tone_name
-  var agreeablenessObjectScore = result.document_tone.tone_categories[2].tones[3].score
+  var agreeablenessObjectScore = result.document_tone.tone_categories[2].tones[3].score.toFixed(2)
   var agreeablenessObjectName = result.document_tone.tone_categories[2].tones[3].tone_name
 
   var scoreEmotionArray = [angerObjectScore, disgustObjectScore, fearObjectScore, joyObjectScore, sadnessObjectScore]
