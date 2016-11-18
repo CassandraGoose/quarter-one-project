@@ -46,24 +46,24 @@ $(document).ready(function() {
 })
 
 function apiInfo(result) {
-  var angerObjectScore = result.document_tone.tone_categories[0].tones[0].score.toFixed(2)
+  var angerObjectScore = result.document_tone.tone_categories[0].tones[0].score.toFixed()
   var angerObjectName = result.document_tone.tone_categories[0].tones[0].tone_name
-  var disgustObjectScore = result.document_tone.tone_categories[0].tones[1].score.toFixed(2)
+  var disgustObjectScore = result.document_tone.tone_categories[0].tones[1].score.toFixed()
   var disgustObjectName = result.document_tone.tone_categories[0].tones[1].tone_name
-  var fearObjectScore = result.document_tone.tone_categories[0].tones[2].score.toFixed(2)
+  var fearObjectScore = result.document_tone.tone_categories[0].tones[2].score.toFixed()
   var fearObjectName = result.document_tone.tone_categories[0].tones[2].tone_name
-  var joyObjectScore = result.document_tone.tone_categories[0].tones[3].score.toFixed(2)
+  var joyObjectScore = result.document_tone.tone_categories[0].tones[3].score.toFixed()
   var joyObjectName = result.document_tone.tone_categories[0].tones[3].tone_name
-  var sadnessObjectScore = result.document_tone.tone_categories[0].tones[4].score.toFixed(2)
+  var sadnessObjectScore = result.document_tone.tone_categories[0].tones[4].score.toFixed()
   var sadnessObjectName = result.document_tone.tone_categories[0].tones[4].tone_name
 
-  var opennessObjectScore = result.document_tone.tone_categories[2].tones[0].score.toFixed(2)
+  var opennessObjectScore = result.document_tone.tone_categories[2].tones[0].score.toFixed()
   var opennessObjectName = result.document_tone.tone_categories[2].tones[0].tone_name
-  var conscientiousnessObjectScore = result.document_tone.tone_categories[2].tones[1].score.toFixed(2)
+  var conscientiousnessObjectScore = result.document_tone.tone_categories[2].tones[1].score.toFixed()
   var conscientiousnessObjectName = result.document_tone.tone_categories[2].tones[1].tone_name
-  var extraversionObjectScore = result.document_tone.tone_categories[2].tones[2].score.toFixed(2)
+  var extraversionObjectScore = result.document_tone.tone_categories[2].tones[2].score.toFixed()
   var extraversionObjectName = result.document_tone.tone_categories[2].tones[2].tone_name
-  var agreeablenessObjectScore = result.document_tone.tone_categories[2].tones[3].score.toFixed(2)
+  var agreeablenessObjectScore = result.document_tone.tone_categories[2].tones[3].score.toFixed()
   var agreeablenessObjectName = result.document_tone.tone_categories[2].tones[3].tone_name
 
   var scoreEmotionArray = [angerObjectScore, disgustObjectScore, fearObjectScore, joyObjectScore, sadnessObjectScore]
@@ -124,7 +124,7 @@ function apiInfo(result) {
   function joyScore(joyObjectScore) {
     if (joyObjectScore < .5) {
       var joyReturn = "joy score is low"
-    } else if (joyObjectScore < .6 && angerObjectScore > .4) {
+    } else if (joyObjectScore < .6 && joyObjectScore > .4) {
       var joyReturn = "joy score is medium"
     } else {
       var joyReturn = "joy score is high"
