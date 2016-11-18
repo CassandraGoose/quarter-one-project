@@ -214,7 +214,7 @@ function apiInfo(result) {
 
   }
 
-  function appendSocialPercent(scoreEmotionArray) {
+  function appendSocialPercent(scoreSocialArray) {
     var opennessPercent = opennessObjectScore * 100 + "%"
     var conscientiousnessPercent = conscientiousnessObjectScore * 100 + "%"
     var extraversionPercent = extraversionObjectScore * 100 + "%"

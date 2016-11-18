@@ -5794,6 +5794,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(even) {
 td.chart {
   font-size: 14px;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 p.percentage {
@@ -5804,4 +5805,10 @@ p.percentage {
 
 .spaces {
   margin-right: 5px;
+}
+
+.spaceshere {
+  margin-left: 50px;
+  padding-left: 10px;
+
 }
