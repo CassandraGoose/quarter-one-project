@@ -39,7 +39,7 @@ $(document).ready(function() {
   })
 
   function callAPI(inputText) {
-    $.get('https://watson-tone-analyzer.herokuapp.com/?version=2016-05-19&text=' + inputText, function(result) {
+    $.get('this link is saved in goose computer in notes' + inputText, function(result) {
       apiInfo(result)
     })
   }
