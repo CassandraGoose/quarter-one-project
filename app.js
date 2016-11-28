@@ -1,26 +1,26 @@
 $(document).ready(function() {
 
-      $(".toggle-menu").on("click", function(event) {
+      $(".toggle-menu").on("click", (event) => {
         $("#menu").toggleClass("is-open")
       })
 
-      $('#thisarea').keypress(function(event) {
+      $('#thisarea').keypress((event) => {
         if (event.keyCode == 13) {
           $('#thisbutton').click()
         }
       });
 
-      $('form').on('submit', function(event) {
+      $('form').on('submit', (event) => {
         event.preventDefault()
-        var inputText = $('#thisarea').val()
+        let inputText = $('#thisarea').val()
         callAPI(inputText)
-        $('#successful').append("Success!").fadeIn(500, function() {
+        $('#successful').append("Success!").fadeIn(500, () => {
           $(this).delay(4000).fadeOut(500)
         })
         $('#successful').html('<img src="images/icon1.png"><img src="images/icon1.png"><img src="images/icon1.png"><img src="images/icon1.png">')
       })
 
-      $('#clearjq').on('click', function(event) {
+      $('#clearjq').on('click', (event) => {
         $('#toneresults').html('')
         $('#suggestions').html('')
         $('#socialtoneresults').html('')
@@ -38,36 +38,36 @@ $(document).ready(function() {
       })
 
       function callAPI(inputText) {
-        $.get('this link available on goose computer in notes' + inputText, function(result) {
+        $.get(`this link available on goose computer in notes ${inputText}`, (result) => {
 
           apiInfo(result)
         })
       }
 
       function apiInfo(result) {
-        var angerObjectScore = result.document_tone.tone_categories[0].tones[0].score.toFixed()
-        var angerObjectName = result.document_tone.tone_categories[0].tones[0].tone_name
-        var disgustObjectScore = result.document_tone.tone_categories[0].tones[1].score.toFixed()
-        var disgustObjectName = result.document_tone.tone_categories[0].tones[1].tone_name
-        var fearObjectScore = result.document_tone.tone_categories[0].tones[2].score.toFixed()
-        var fearObjectName = result.document_tone.tone_categories[0].tones[2].tone_name
-        var joyObjectScore = result.document_tone.tone_categories[0].tones[3].score.toFixed()
-        var joyObjectName = result.document_tone.tone_categories[0].tones[3].tone_name
-        var sadnessObjectScore = result.document_tone.tone_categories[0].tones[4].score.toFixed()
-        var sadnessObjectName = result.document_tone.tone_categories[0].tones[4].tone_name
+        let angerObjectScore = result.document_tone.tone_categories[0].tones[0].score.toFixed()
+        let angerObjectName = result.document_tone.tone_categories[0].tones[0].tone_name
+        let disgustObjectScore = result.document_tone.tone_categories[0].tones[1].score.toFixed()
+        let disgustObjectName = result.document_tone.tone_categories[0].tones[1].tone_name
+        let fearObjectScore = result.document_tone.tone_categories[0].tones[2].score.toFixed()
+        let fearObjectName = result.document_tone.tone_categories[0].tones[2].tone_name
+        let joyObjectScore = result.document_tone.tone_categories[0].tones[3].score.toFixed()
+        let joyObjectName = result.document_tone.tone_categories[0].tones[3].tone_name
+        let sadnessObjectScore = result.document_tone.tone_categories[0].tones[4].score.toFixed()
+        let sadnessObjectName = result.document_tone.tone_categories[0].tones[4].tone_name
 
-        var opennessObjectScore = result.document_tone.tone_categories[2].tones[0].score.toFixed()
-        var opennessObjectName = result.document_tone.tone_categories[2].tones[0].tone_name
-        var conscientiousnessObjectScore = result.document_tone.tone_categories[2].tones[1].score.toFixed()
-        var conscientiousnessObjectName = result.document_tone.tone_categories[2].tones[1].tone_name
-        var extraversionObjectScore = result.document_tone.tone_categories[2].tones[2].score.toFixed()
-        var extraversionObjectName = result.document_tone.tone_categories[2].tones[2].tone_name
-        var agreeablenessObjectScore = result.document_tone.tone_categories[2].tones[3].score.toFixed()
-        var agreeablenessObjectName = result.document_tone.tone_categories[2].tones[3].tone_name
+        let opennessObjectScore = result.document_tone.tone_categories[2].tones[0].score.toFixed()
+        let opennessObjectName = result.document_tone.tone_categories[2].tones[0].tone_name
+        let conscientiousnessObjectScore = result.document_tone.tone_categories[2].tones[1].score.toFixed()
+        let conscientiousnessObjectName = result.document_tone.tone_categories[2].tones[1].tone_name
+        let extraversionObjectScore = result.document_tone.tone_categories[2].tones[2].score.toFixed()
+        let extraversionObjectName = result.document_tone.tone_categories[2].tones[2].tone_name
+        let agreeablenessObjectScore = result.document_tone.tone_categories[2].tones[3].score.toFixed()
+        let agreeablenessObjectName = result.document_tone.tone_categories[2].tones[3].tone_name
 
-        var scoreEmotionArray = [angerObjectScore, disgustObjectScore, fearObjectScore, joyObjectScore, sadnessObjectScore]
+        let scoreEmotionArray = [angerObjectScore, disgustObjectScore, fearObjectScore, joyObjectScore, sadnessObjectScore]
 
-        var scoreSocialArray = [opennessObjectScore, conscientiousnessObjectScore, extraversionObjectScore, agreeablenessObjectScore]
+        let scoreSocialArray = [opennessObjectScore, conscientiousnessObjectScore, extraversionObjectScore, agreeablenessObjectScore]
 
         function appendTone(result) {
           $('#toneresults').append(new Option(angerScore(angerObjectScore)))
@@ -86,120 +86,120 @@ $(document).ready(function() {
 
         function angerScore(angerObjectScore) {
           if (angerObjectScore < .5) {
-            var angerReturn = "anger score is low"
+            let angerReturn = "anger score is low"
           } else if (angerObjectScore < .6 && angerObjectScore > .4) {
-            var angerReturn = "anger score is medium"
+            let angerReturn = "anger score is medium"
           } else {
-            var angerReturn = "anger score is high"
+            let angerReturn = "anger score is high"
           }
-          var returnThis = angerReturn
-          return "Your " + returnThis + "."
+          let returnThis = angerReturn
+          return `Your ${returnThis}.`
         }
 
         function disgustScore(disgustObjectScore) {
           if (disgustObjectScore < .5) {
-            var disgustReturn = "disgust score is low"
+            let disgustReturn = "disgust score is low"
           } else if (disgustObjectScore < .6 && disgustObjectScore > .4) {
-            var disgustReturn = "disgust score is medium"
+            let disgustReturn = "disgust score is medium"
           } else {
-            var disgustReturn = "disgust score is high"
+            let disgustReturn = "disgust score is high"
           }
-          var returnThis = disgustReturn
-          return "Your " + returnThis + "."
+          let returnThis = disgustReturn
+          return `Your ${returnThis}.`
         }
 
         function fearScore(fearObjectScore) {
           if (fearObjectScore < .5) {
-            var fearReturn = "fear score is low"
+            let fearReturn = "fear score is low"
           } else if (fearObjectScore < .6 && fearObjectScore > .4) {
-            var fearReturn = "fear score is medium"
+            let fearReturn = "fear score is medium"
           } else {
-            var fearReturn = "fear score is high"
+            let fearReturn = "fear score is high"
           }
-          var returnThis = fearReturn
-          return "Your " + returnThis + "."
+          let returnThis = fearReturn
+          return `Your ${returnThis}.`
         }
 
         function joyScore(joyObjectScore) {
           if (joyObjectScore < .5) {
-            var joyReturn = "joy score is low"
+            let joyReturn = "joy score is low"
           } else if (joyObjectScore < .6 && joyObjectScore > .4) {
-            var joyReturn = "joy score is medium"
+            let joyReturn = "joy score is medium"
           } else {
-            var joyReturn = "joy score is high"
+            let joyReturn = "joy score is high"
           }
-          var returnThis = joyReturn
-          return "Your " + returnThis + "."
+          let returnThis = joyReturn
+          return `Your ${returnThis}.`
         }
 
         function sadnessScore(sadnessObjectScore) {
           if (sadnessObjectScore < .5) {
-            var sadnessReturn = "sadness score is low"
+            let sadnessReturn = "sadness score is low"
           } else if (sadnessObjectScore < .6 && sadnessObjectScore > .4) {
-            var sadnessReturn = "sadness score is medium"
+            let sadnessReturn = "sadness score is medium"
           } else {
-            var sadnessReturn = "sadness score is high"
+            let sadnessReturn = "sadness score is high"
           }
-          var returnThis = sadnessReturn
-          return "Your " + returnThis + "."
+          let returnThis = sadnessReturn
+          return `Your ${returnThis}.`
         }
 
         function opennessScore(opennessObjectScore) {
           if (opennessObjectScore < .5) {
-            var opennessReturn = "openness score is low"
+            let opennessReturn = "openness score is low"
           } else if (opennessObjectScore < .6 && opennessObjectScore > .4) {
-            var opennessReturn = "openness score is medium"
+            let opennessReturn = "openness score is medium"
           } else {
-            var opennessReturn = "openness score is high"
+            let opennessReturn = "openness score is high"
           }
-          var returnThis = opennessReturn
-          return "Your " + returnThis + "."
+          let returnThis = opennessReturn
+          return `Your ${returnThis}.`
         }
 
         function conscientiousnessScore(conscientiousnessObjectScore) {
           if (conscientiousnessObjectScore < .5) {
-            var conscientiousnessReturn = "conscientiousness score is low"
+            let conscientiousnessReturn = "conscientiousness score is low"
           } else if (conscientiousnessObjectScore < .6 && conscientiousnessObjectScore > .4) {
-            var conscientiousnessReturn = "conscientiousness score is medium"
+            let conscientiousnessReturn = "conscientiousness score is medium"
           } else {
-            var conscientiousnessReturn = "conscientiousness score is high"
+            let conscientiousnessReturn = "conscientiousness score is high"
           }
-          var returnThis = conscientiousnessReturn
-          return "Your " + returnThis + "."
+          let returnThis = conscientiousnessReturn
+          return `Your ${returnThis}.`
         }
 
         function extraversionScore(extraversionObjectScore) {
           if (extraversionObjectScore < .5) {
-            var extraversionReturn = "extraversion score is low"
+            let extraversionReturn = "extraversion score is low"
           } else if (extraversionObjectScore < .6 && extraversionObjectScore > .4) {
-            var extraversionReturn = "extraversion score is medium"
+            let extraversionReturn = "extraversion score is medium"
           } else {
-            var extraversionReturn = "extraversion score is high"
+            let extraversionReturn = "extraversion score is high"
           }
-          var returnThis = extraversionReturn
-          return "Your " + returnThis + "."
+          let returnThis = extraversionReturn
+          return `Your ${returnThis}.`
         }
 
         function agreeablenessScore(agreeablenessObjectScore) {
           console.log(agreeablenessObjectScore)
           if (agreeablenessObjectScore < .5) {
-            var agreeablenessReturn = "agreeableness score is low"
+            let agreeablenessReturn = "agreeableness score is low"
           } else if (agreeablenessObjectScore < .6 && agreeablenessObjectScore > .4) {
-            var agreeablenessReturn = "agreeableness score is medium"
+            let agreeablenessReturn = "agreeableness score is medium"
           } else if (agreeablenessObjectScore > .5) {
-            var agreeablenessReturn = "agreeableness score is high"
+            let agreeablenessReturn = "agreeableness score is high"
 
           }
-          var returnThis = agreeablenessReturn
-          return "Your " + returnThis + "."
+          let returnThis = agreeablenessReturn
+          return `Your ${returnThis}.`
         }
 
         function appendPercent(scoreEmotionArray) {
-          var angerPercent = angerObjectScore * 100 + "%"
-          var disgustPercent = disgustObjectScore * 100 + "%"
-          var fearPercent = fearObjectScore * 100 + "%"
-          var joyPercent = joyObjectScore * 100 + "%"
-          var sadnessPercent = sadnessObjectScore * 100 + "%"
+          let angerPercent = angerObjectScore * 100 + "%"
+          let disgustPercent = disgustObjectScore * 100 + "%"
+          let fearPercent = fearObjectScore * 100 + "%"
+          let joyPercent = joyObjectScore * 100 + "%"
+          let sadnessPercent = sadnessObjectScore * 100 + "%"
           $('#angerID').append(angerPercent)
           $('#disgustID').append(disgustPercent)
           $('#fearID').append(fearPercent)
@@ -214,10 +214,10 @@ $(document).ready(function() {
         }
 
         function appendSocialPercent(scoreSocialArray) {
-          var opennessPercent = opennessObjectScore * 100 + "%"
-          var conscientiousnessPercent = conscientiousnessObjectScore * 100 + "%"
-          var extraversionPercent = extraversionObjectScore * 100 + "%"
-          var agreeablenessPercent = agreeablenessObjectScore * 100 + "%"
+          let opennessPercent = opennessObjectScore * 100 + "%"
+          let conscientiousnessPercent = conscientiousnessObjectScore * 100 + "%"
+          let extraversionPercent = extraversionObjectScore * 100 + "%"
+          let agreeablenessPercent = agreeablenessObjectScore * 100 + "%"
           $('#opennessID').append(opennessPercent)
           $('#conscientiousnessID').append(conscientiousnessPercent)
           $('#extraversionID').append(extraversionPercent)
@@ -230,9 +230,9 @@ $(document).ready(function() {
         }
 
         function highestScore(scoreEmotionArray) {
-          var max = scoreEmotionArray[0]
-          var maxIndex = 0
-          for (var i = 0; i < scoreEmotionArray.length; i++) {
+          let max = scoreEmotionArray[0]
+          let maxIndex = 0
+          for (let i = 0; i < scoreEmotionArray.length; i++) {
             if (scoreEmotionArray[i] > max) {
               maxIndex = i
               max = scoreEmotionArray[i]
@@ -269,9 +269,9 @@ $(document).ready(function() {
         }
 
         function highestSocialScore(scoreSocialArray) {
-          var max = scoreSocialArray[0]
-          var maxIndex = 0
-          for (var i = 0; i < scoreSocialArray.length; i++) {
+          let max = scoreSocialArray[0]
+          let maxIndex = 0
+          for (let i = 0; i < scoreSocialArray.length; i++) {
             if (scoreSocialArray[i] > max) {
               maxIndex = i
               max = scoreSocialArray[i]
