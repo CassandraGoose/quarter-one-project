@@ -38,8 +38,8 @@ $(document).ready(function() {
       })
 
       function callAPI(inputText) {
-        $.get('this link available on goose computer in notes' + inputText, function(result) {
-
+        $.get('https://watson-tone-analyzer.herokuapp.com/?version=2016-05-19&text=' + inputText, function(result) {
+          console.log(result)
           apiInfo(result)
         })
       }
@@ -210,7 +210,6 @@ $(document).ready(function() {
           $('#fearBar').css('width', "" + fearPercent + "")
           $('#joyBar').css('width', "" + joyPercent + "")
           $('#sadnessBar').css('width', "" + sadnessPercent + "")
-
         }
 
         function appendSocialPercent(scoreSocialArray) {
@@ -307,3 +306,5 @@ $(document).ready(function() {
         highestScore(scoreEmotionArray)
         highestSocialScore(scoreSocialArray)
       }
+
+})
