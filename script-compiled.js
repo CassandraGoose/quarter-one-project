@@ -38,8 +38,8 @@ $(document).ready(function () {
   });
 
   function callAPI(inputText) {
-    $.get(`https://newproxywhodis.herokuapp.com/${inputText}`, result => {
-      console.log("NEW PROXY WHO DIS");
+    $.get(`https://newproxywhodis.herokuapp.com/${ inputText }`, result => {
+
       apiInfo(result);
     });
   }
