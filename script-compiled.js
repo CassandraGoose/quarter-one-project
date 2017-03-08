@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   function callAPI(inputText) {
     $.get(`https://newproxywhodis.herokuapp.com/${ inputText }`, result => {
-
+      console.log("NEW PROXY WHO DIS");
       apiInfo(result);
     });
   }
