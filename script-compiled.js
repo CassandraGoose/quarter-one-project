@@ -38,7 +38,7 @@ $(document).ready(function () {
   });
 
   function callAPI(inputText) {
-    $.get(`https://newproxywhodis.herokuapp.com/tone?version=2016-05-19&text=${inputText}`, result => {
+    $.get(`https://newproxywhodis.herokuapp.com/${inputText}`, result => {
       console.log("NEW PROXY WHO DIS");
       apiInfo(result);
     });
