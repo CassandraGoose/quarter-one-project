@@ -38,7 +38,8 @@ $(document).ready(function () {
   });
 
   function callAPI(inputText) {
-    $.get(`http://torske-proxy.herokuapp.com/${ inputText }`, result => {
+    $.get(`https://newproxywhodis.herokuapp.com/?version=2016-05-19&text=${inputText}`, result => {
+      console.log("NEW PROXY WHO DIS");
       apiInfo(result);
     });
   }
