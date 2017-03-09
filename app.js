@@ -38,10 +38,14 @@ $(document).ready(function() {
       })
 
       function callAPI(inputText) {
-        $.get(`https://newproxywhodis.herokuapp.com/${ inputText }`, result => {
+        $.get(`https://newproxywhodis.herokuapp.com/?text=${ inputText }`, result => {
           console.log("NEW PROXY WHO DIS");
           apiInfo(result);
         });
+        // $.get(`http://localhost:3000/?text=${ inputText }`, result => {
+        //   console.log("NEW PROXY WHO DIS");
+        //   apiInfo(result);
+        // });
       }
 
       function apiInfo(result) {
